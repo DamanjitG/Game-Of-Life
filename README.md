@@ -38,5 +38,7 @@ Once the program has run the given amount of generations, it will print the mess
 
 This project was completed as part of the ICS4U course at Milton District High School.
 
-## R.I.P. JOHN HORTON CONWAY (26 DECEMBER 1937 - 11 APRIL 2020)
+[Credit to GitHub user kmorcinek for the .gitignore file found here.](https://gist.github.com/kmorcinek/2710267)
+
+R.I.P. John Horton Conway (26 December 1937 - 11 April 2020)
 
