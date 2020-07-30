@@ -38,5 +38,5 @@ Once the program has run the given amount of generations, it will print the mess
 
 This project was completed as part of the ICS4U course at Milton District High School.
 
-## R.I.P. JOHN HORTON CONWAY (26 DECEMBER 1937 - 11 APRIL 2020)
+R.I.P. JOHN HORTON CONWAY (26 DECEMBER 1937 - 11 APRIL 2020)
 
