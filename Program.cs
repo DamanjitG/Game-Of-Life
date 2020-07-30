@@ -109,9 +109,10 @@ namespace GameOfLife
                 {
                     Console.WriteLine();
                     Console.WriteLine("Press enter to display the next generation");
+                    Console.ReadLine();
                 }
-                Console.ReadLine();
             }
+            Console.WriteLine();
             Console.WriteLine("The simulation has ended.");
             //Test test = new Test();
         }
