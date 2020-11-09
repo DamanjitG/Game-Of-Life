@@ -87,10 +87,11 @@ namespace GameOfLife
                 mainGrid.Display();
                 Console.WriteLine("");
                 Console.WriteLine("Simulating next generation...");
-                Thread.Sleep(100);
+                Thread.Sleep(750);
             }
             Console.WriteLine();
-            Console.WriteLine("The simulation has ended.");
+            Console.WriteLine("The simulation has ended. Press enter to exit.");
+            Console.ReadLine();
             //Test test = new Test();
         }
     }
