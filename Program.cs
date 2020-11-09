@@ -19,9 +19,7 @@ namespace GameOfLife
             //Dimensions
             int gridRows=0;
             int gridColumns=0;
-            //Used to store the desired number of generations
-            int simCount = 0;
-            //Boolean used for while loops
+            //Boolean used for input while loops
             bool badInput = true;
             //User inputs amount of rows for the grid, while loop + try catch ensure correct input
             while (badInput == true)
@@ -71,46 +69,25 @@ namespace GameOfLife
             //Initialize grid, populate with first generation, and display grid 
             Grid mainGrid = new Grid(gridRows,gridColumns);
             mainGrid.PopulateRandom();
-            Console.WriteLine("Here is Generation 1");
+            Console.WriteLine("Here is Generation 1:");
+            Console.WriteLine();
             mainGrid.Display();
+            Console.WriteLine();
             //Get desired amount of simulations, using while loop + try/catch to ensure correct input
             badInput = true;
-            while (badInput == true)
+            Console.WriteLine("Press enter to begin the simulation. Once the simulation begins, press esc to stop.");
+            Console.ReadLine();
+            Console.WriteLine("Simulating next generation...");
+            //While loop to run the simulation until the user presses esc
+            while (!(Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Escape))
             {
-                try
-                {
-                    Console.WriteLine("How many times would you like to run the simulation?");
-                    simCount = Convert.ToInt32(Console.ReadLine());
-                    if (simCount > 0)
-                    {
-                        badInput = false;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Your input was 0 or less. It must be positive.");
-                    }
-                }
-                catch(Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    Console.WriteLine("Input a positive integer.");
-                }
-            }
-            //For loop to run the simulation for the desired number of generations
-            for (int i = 0; i < simCount; i++)
-            {
-                //Populates interim array, runs next generation function, displays new generation
-                Console.WriteLine("Generation " + (i+2));
-                Console.WriteLine();
                 mainGrid.PopulateInterim();
                 mainGrid.NextGeneration();
+                Console.Clear();
                 mainGrid.Display();
-                if (i < (simCount-1))
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Press enter to display the next generation");
-                    Console.ReadLine();
-                }
+                Console.WriteLine("");
+                Console.WriteLine("Simulating next generation...");
+                Thread.Sleep(100);
             }
             Console.WriteLine();
             Console.WriteLine("The simulation has ended.");
